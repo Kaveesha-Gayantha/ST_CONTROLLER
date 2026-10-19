@@ -1,4 +1,3 @@
-
 name: Build Android APK
 
 on:
@@ -39,9 +38,11 @@ jobs:
             libtinfo6 libffi-dev libssl-dev \
             libltdl-dev ccache
 
-      - name: Install Buildozer
+      - name: Install Buildozer and Downgrade Virtualenv
         run: |
           python -m pip install --upgrade pip setuptools wheel
+          # මෙම පේළිය මඟින් ඉහත පැමිණි ImportError දෝෂය ස්ථිරවම නිරාකරණය කරයි
+          python -m pip install "virtualenv<20.26.1"
           python -m pip install "Cython==0.29.36" buildozer
 
       - name: Configure Android SDK licenses
