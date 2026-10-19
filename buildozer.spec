@@ -18,8 +18,9 @@ android.permissions = PACKAGE_USAGE_STATS,SYSTEM_ALERT_WINDOW
 android.api = 31
 android.minapi = 21
 
+# මෙතැන SDK එක API එකට සමානව 31 ලෙස සකසන්න
+android.sdk = 31
 android.ndk = 25b
-android.sdk = 30
 
 android.services = EdgeService:service.py
 
